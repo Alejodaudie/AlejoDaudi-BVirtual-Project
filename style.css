@@ -1,0 +1,416 @@
+
+/* ---- reset ---- */
+
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+  
+  
+  /* ---- typography ---- */
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: url("images/background.jpg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 147%;
+    font-weight: bold;
+  }
+  
+  
+  p {
+    margin: 0;
+  }
+
+
+  /* NAV */
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ea0032;
+    grid-column-start: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+  }
+
+
+  nav ul {
+    margin-right: 5%;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+   nav a {
+      text-decoration: none;
+      color: white;
+      padding-right: 42px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+    /* FORM */
+
+    .logo-form{
+      margin-top: 4%;
+    }
+
+    .container {
+      background: white;
+      width: 70%;
+      margin: 25px auto;
+      border: 1px solid;
+      border-radius: .5%;
+      margin-top: 9%;
+    }
+
+    header{
+      margin: 0;
+      background: #1c4f62;
+      text-align: center;
+      padding: 1.5%;
+      color: white;
+    }
+
+    form{
+      width: 95%;
+      margin: auto;
+      background: rgba(28, 79, 98, 0.2);
+      padding: 10px 20px;
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 7px;
+    }
+
+    fieldset{
+      /* border: 0px; */    /* Podria sacar el borde de la tabla, pero me gusta como queda */
+      border: 1px solid  #1c4f62;
+    }
+
+
+
+    /* Esto lo hago asi, porque si no el input de radio, submit y reset, me quedaban descolocados. */
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    .satisfied,
+    textarea {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 7px;
+      box-sizing: border-box;
+      border: 1px solid  #1c4f62;
+      display: block;
+      font-size: 15px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+
+    textarea {
+      resize: none;  /* Para que no se pueda agrandar */
+      /* min-height: 100px;
+      max-height: 200px;
+      max-width: 100%; */
+    }
+
+
+    /* Entonces ahora aqui hago por separado el input de radio */
+
+    input[type="radio"] {
+      margin-left: 4%;
+      margin-bottom: 5%;
+    }
+
+
+    .div-end {
+      text-align: center;
+    }
+
+    .btn-submit{
+      background-color: #1c4f62;
+      color: white;
+      cursor: pointer;
+      border-radius: 11px 11px 11px 11px;
+      border: none;
+      width: 23%;
+      padding: 7px 18px 8px 18px;
+      font-size: 18px;
+      font-family: "Open Sans", OpenSans, sans-serif;
+    }
+
+    /* Para poner sombra en el boton submit*/
+
+    .btn-submit:hover {
+      filter: brightness(150%);
+    }
+
+
+    .btn-reset{
+      background-color: #1c4f62;
+      color: white;
+      cursor: pointer;
+      border-radius: 11px 11px 11px 11px;
+      border: none;
+      width: 23%;
+      padding: 7px 18px 8px 18px;
+      font-size: 18px;
+      font-family: "Open Sans", OpenSans, sans-serif;
+    }
+
+    /* Para poner sombra en el boton reset*/
+
+    .btn-reset:hover {
+      filter: brightness(150%);
+    }
+
+
+    /* Para poner * rojo a las opciones obligatorias */
+
+    .personal-info label::after {
+      content: "*";
+      color: red;
+    }
+
+    .account-info label::after {
+      content: "*";
+      color: red;
+    }
+
+
+
+
+
+
+    /* FOOTER */
+
+    footer{
+        background-color: #343a40;
+        color: rgba(255, 255, 255, 0.63);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        border-top: 1px solid rgb(170, 168, 168); 
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    
+    
+    
+    
+    
+    /* TEAM.HTML */
+
+    .body-team {
+      display: flex;
+      flex-direction: column;
+    }
+
+    section{
+      width: 100%;
+      text-align: center;
+      color: white;
+      padding-top: 80px;
+      flex-grow: 1;
+    }
+
+    .img-alejo {
+        height: 250px;
+        border-radius: 50%;
+    }
+
+
+
+
+    /* RESPONSIVE - MEDIA QUERY */
+
+
+    @media (min-width: 0px) and (max-width: 320px) {
+      body {
+        margin: 0;
+        padding: 0;
+        background-size: 100vw 100vh;
+        font-size: 14px;  /* Si no, no me cabria el "Gender" */
+        line-height: 139%;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      nav{
+        font-size: 17px;
+        width: 100%;
+        padding: 1%;
+      }
+      .container {
+        width: 90%;
+        margin-top: 30%;
+      }
+      .btn-submit{ 
+        width: 44%;
+        font-size: 18px;
+      }
+      .btn-reset {
+        width: 52%;
+        font-size: 18px;
+      }
+      footer{
+        font-size: 18px;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
+
+
+    @media (min-width: 321px) and (max-width: 480px) {
+      body {
+        margin: 0;
+        padding: 0;
+        background-size: 100vw 100vh;
+        font-size: 22px;
+        line-height: 147%;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      nav{
+        font-size: 19px;
+        width: 100%;
+        padding: 1%;
+      }
+      nav a {
+        padding-right: 5px;
+      }
+      .container {
+        width: 100%;
+        margin-top: 25%;
+      }
+      .btn-submit{ 
+        width: 40%;
+        font-size: 18px;
+      }
+      .btn-reset {
+        width: 44%;
+        font-size: 18px;
+      }
+      footer{
+        font-size: 20px;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
+
+
+    @media (min-width: 481px) and (max-width: 568px) {
+      body {
+        margin: 0;
+        padding: 0;
+        background-size: 100vw 100vh;
+        font-size: 22px;
+        line-height: 147%;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      nav{
+        font-size: 22px;
+        width: 100%;
+        padding: 0%;
+      }
+      .container {
+        width: 90%;
+        margin-top: 22%;
+      }
+      .btn-submit{ 
+        width: 37%;
+        font-size: 18px;
+      }
+      .btn-reset {
+        width: 41%;
+        font-size: 18px;
+      }
+      footer{
+        font-size: 20px;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
+
+
+    @media (min-width: 569px) and (max-width: 768px) {
+      body {
+        margin: 0;
+        padding: 0;
+        background-size: 100vw 100vh;
+        font-size: 22px;
+        line-height: 147%;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      nav{
+        font-size: 22px;
+        width: 100%;
+        padding: 0%;
+      }
+      .container {
+        width: 90%;
+        margin-top: 17%;
+      }
+      .btn-submit{ 
+        width: 30%;
+        font-size: 18px;
+      }
+      .btn-reset {
+        width: 32%;
+        font-size: 18px;
+      }
+      footer{
+        font-size: 19px;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
